@@ -11,6 +11,15 @@
   <PropertyGroup>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>pkgspy</ToolCommandName>
+    <PackageId>Valleysoft.NuGetPackageSpy</PackageId>
+    <Title>NuGet Package Spy</Title>
+    <Description>A .NET CLI to query for NuGet package information.</Description>
+    <PackageTags>nuget</PackageTags>
+    <Authors>Matt Thalman and Contributors</Authors>
+    <RepositoryUrl>https://github.com/mthalman/NuGetPackageSpy</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
