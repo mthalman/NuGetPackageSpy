@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33109.374
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F5ACCF8-D8B3-4496-BA57-44ABD307F11E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valleysoft.NuGetPackageSpy", "Valleysoft.NuGetPackageSpy\Valleysoft.NuGetPackageSpy.csproj", "{EA5682B5-9631-4157-B091-87B48EF4D376}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valleysoft.NuGetPackageSpy.Core", "Valleysoft.NuGetPackageSpy.Core\Valleysoft.NuGetPackageSpy.Core.csproj", "{A5270BE8-A976-4C17-93C7-74F34F069798}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA5682B5-9631-4157-B091-87B48EF4D376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5682B5-9631-4157-B091-87B48EF4D376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5682B5-9631-4157-B091-87B48EF4D376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5682B5-9631-4157-B091-87B48EF4D376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5270BE8-A976-4C17-93C7-74F34F069798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5270BE8-A976-4C17-93C7-74F34F069798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5270BE8-A976-4C17-93C7-74F34F069798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5270BE8-A976-4C17-93C7-74F34F069798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4C038EB-784B-4D0C-A29A-D895F2F509E5}
+	EndGlobalSection
+EndGlobal
