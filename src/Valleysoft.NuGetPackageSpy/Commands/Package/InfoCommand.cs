@@ -19,7 +19,9 @@ internal class InfoCommand : CommandWithOptions<InfoOptions>
 
     protected override async Task ExecuteAsync()
     {
-        var package = await _metadataService.GetAsync(Options.PackageIdentity);
+        var package = await _metadataService.GetAsync(Options.PackageIdentity) ??
+            throw new Exception($"Package '{Options.PackageIdentity}' is not found.");
+
         Console.WriteLine(package.ToJson(Newtonsoft.Json.Formatting.Indented));
         //Console.WriteLine($"Name: {package.Identity.Id}");
         //Console.WriteLine($"Version: {package.Identity.Version}");

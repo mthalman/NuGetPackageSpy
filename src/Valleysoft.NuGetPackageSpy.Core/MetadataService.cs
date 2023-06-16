@@ -27,6 +27,7 @@ internal class MetadataService : IMetadataService
         SourceRepository repository = Repository.Factory.GetCoreV3("https://api.nuget.org/v3/index.json");
         PackageMetadataResource resource = await repository.GetResourceAsync<PackageMetadataResource>();
 
-        return await resource.GetMetadataAsync(packageId, _sourceCacheContext, NullLogger.Instance, cancellationToken);
+        return await resource.GetMetadataAsync(packageId, _sourceCacheContext, NullLogger.Instance, cancellationToken) ??
+            throw new Exception($"Package '{packageId}' is not found.");
     }
 }

@@ -30,7 +30,7 @@ internal class PathCommand : CommandWithOptions<PathOptions>
         }
         else
         {
-            Console.WriteLine("Nothing found");
+            throw new Exception($"No dependency path exists from '{Options.SourcePackage}' to '{Options.TargetPackage}' using target framework '{Options.Framework}'.");
         }
     }
 

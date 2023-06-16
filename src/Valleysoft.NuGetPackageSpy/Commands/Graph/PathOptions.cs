@@ -28,7 +28,13 @@ internal class PathOptions : OptionsBase
 
     protected override void GetValues()
     {
-        Framework = NuGetFramework.Parse(ParseResult.GetValueForArgument(_frameworkArg));
+        string fwkArg = ParseResult.GetValueForArgument(_frameworkArg);
+        Framework = NuGetFramework.Parse(fwkArg);
+        if (Framework == NuGetFramework.UnsupportedFramework)
+        {
+            throw new Exception($"Target framework '{fwkArg}' is unsupported.");
+        }
+
         SourcePackage = _srcPackageIdentifierBinder.GetBoundValue(ParseResult);
         TargetPackage = _targetPackageIdentifierBinder.GetBoundValue(ParseResult);
     }
