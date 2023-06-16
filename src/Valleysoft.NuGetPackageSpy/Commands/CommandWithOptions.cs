@@ -15,10 +15,19 @@ internal abstract class CommandWithOptions<TOptions> : Command
         this.SetHandler(ExecuteAsyncCore);
     }
 
-    private async Task ExecuteAsyncCore(InvocationContext context)
+    private async Task<int> ExecuteAsyncCore(InvocationContext context)
     {
-        Options.SetParseResult(context.BindingContext.ParseResult);
-        await ExecuteAsync();
+        try
+        {
+            Options.SetParseResult(context.BindingContext.ParseResult);
+            await ExecuteAsync();
+            return 0;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+            return 1;
+        }
     }
 
     protected abstract Task ExecuteAsync();

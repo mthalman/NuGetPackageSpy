@@ -21,5 +21,16 @@ internal class PackageIdentifierBinder
     public PackageIdentity GetBoundValue(ParseResult parseResult) =>
         new(
             parseResult.GetValueForArgument(_name),
-            NuGetVersion.Parse(parseResult.GetValueForArgument(_version)));
+            GetNuGetVersion(parseResult));
+
+    private NuGetVersion GetNuGetVersion(ParseResult parseResult)
+    {
+        string arg = parseResult.GetValueForArgument(_version);
+        if (!NuGetVersion.TryParse(arg, out NuGetVersion ver))
+        {
+            throw new Exception($"The value for option '{_version.Name}' is not a valid NuGet version: '{arg}'");
+        }
+
+        return ver;
+    }
 }
